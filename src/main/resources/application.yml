@@ -1,16 +1,20 @@
+# 本地环境
 spring:
   datasource:
+    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost/notice_service
     username: root
     password: 123456
   jpa:
     hibernate:
       ddl-auto: update #自动更新
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true  #日志中显示sql语句
   flyway:
     enabled: false #暂时不使用，使用Hibernate自动更新
     locations: classpath:/db
 
+# 生产环境
 ---
 spring:
   profiles: production #生产环境
@@ -24,3 +28,18 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+
+# 测试环境
+---
+spring:
+  profiles: test 
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:dbtest
+    username: sa
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update #自动更新
+    show-sql: true  #日志中显示sql语句

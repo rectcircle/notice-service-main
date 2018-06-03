@@ -1,4 +1,12 @@
 language: java
-
 before_install:
   - chmod +x mvnw
+  
+deploy:
+  provider: heroku
+  app: notice-service-main
+  api_key:
+    secure: kqWwwStmetzpCmXRpCZ0Vv6x1UmuTJ5HuL6KJmuhLfSXa5O8SGELDXAdy8sLdDk2OOKDaDQg2FLUZ6c84ElHlk6YrSrIvAvawN+yRAKtOrdtLNE3NCia9Kd1WL6NO0016ZFatGGmAsvkZhoqNHAAdM3lUGL54XrMpadOqJp5Fj6YOgXC8d6jgM7jDrRO58Nq2rNr1Kxmc09fx9zT/nD7PWt9Lz7urfdEvuc9F9T6vUYmuSyoSe7xczcTr5UVXzVJ+KP0aFGPCAvKHIh21gtDKxr5aGwLf0stWF83FJOi8Nfl/5FKWguZlQCY2cNYvN59bIk/HlOOvofNpPgbsZDu1FAb3RAID2xthWYlMH5MioO8HrpVyxHYh2TJuxuxGL/YDmyBXsXtG1CHG94yphMsWZTyDizBndwcA2ThOFMablDt/H04gL1XIclt3hdK+HMb23IRByULSQfZ+EDUUf6eiVk6kWFIuVCxITNWMhIrQEt2B+A220A/bySyg6sgTM/oejQRVbBKB8Q5v54HWtPhZ9JPUhc0kya5WjI1XaYRektkx4EDSIIancMxUJXViYVeZM79t5X7WyQYJ9DwfKiucZCqdjEpd9iBmQD9MEmAhI2pA6Dr8RfEoZDuA8kq6znJLbAVPaM5rOwMhlO3vGJYWj4HvysbJpf45nVKxjkiUFc=
+env:
+  global:
+    - SPRING_PROFILES_ACTIVE=test
