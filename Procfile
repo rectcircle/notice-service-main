@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar target/notice-service-main.jar --spring.profiles.active=production

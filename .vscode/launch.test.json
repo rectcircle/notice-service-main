@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "notice-service-main",
+                "projectName": "notice-service-main",
+                "workingDirectory": "/home/rectcircle/Project/devops/notice-service/notice-service-main",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "notice-service-main",
+                "projectName": "notice-service-main",
+                "workingDirectory": "/home/rectcircle/Project/devops/notice-service/notice-service-main",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
