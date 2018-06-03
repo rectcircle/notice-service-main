@@ -20,9 +20,9 @@ spring:
   profiles: production #生产环境
   datasource:
     driverClassName: org.postgresql.Driver
-    url: ${JDBC_DATABASE_URL}
-    username: ${DATABASE_USER}
-    password: ${DATABASE_PASS}
+    url: ${JDBC_DATABASE_URL} #在此拼装密码
+    # username: ${DATABASE_USER} #这种方式抛异常
+    # password: ${DATABASE_PASS} 
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
